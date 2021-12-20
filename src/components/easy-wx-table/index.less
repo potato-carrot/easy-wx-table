@@ -1,0 +1,45 @@
+.component-carrot-table {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  .thead-wrap {
+    display: inline-block;
+    text-align: center;
+    .thead {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      &.thead-border:last-child {
+        border-right: none !important;
+      }
+      .thead-cell {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  .tbody-wrap {
+    display: inline-block;
+    .row {
+      display: flex;
+      text-align: center;
+      border-bottom: 1rpx solid #eee;
+      &.row-border:last-child {
+        border-bottom: none !important;
+      }
+      .row-cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        &.row-cell-border:last-child {
+          border-right: none !important;
+        }
+      }
+    }
+  }
+}

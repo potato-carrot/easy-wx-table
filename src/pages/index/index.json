@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "easy-wx-table":"../../../components/easy-wx-table"
+  }
+}

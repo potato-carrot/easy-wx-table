@@ -1,0 +1,9 @@
+<view style="display:flex;justify-content:center;">
+	<easy-wx-table
+	 dataSource="{{dataSource}}"
+	 columns="{{columns}}"
+	 border="{{border}}"
+	 style="{{style}}"
+	/>
+</view>
+
