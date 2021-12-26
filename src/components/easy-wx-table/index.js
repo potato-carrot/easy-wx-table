@@ -96,15 +96,25 @@ Component({
     },
 
     parseCustomTbodyData(dataSource) {
-      return Array.isArray(dataSource)
-        ? dataSource.map(
-          ({ text = "", style = {}, bindtap = Function.prototype }) => ({
-            text,
-            style: styleObj2String(style),
-            bindtap,
-          })
-        )
-        : [];
+      if (Object.prototype.toString.call(dataSource) === '[object Object]') {
+        const { style = {}, children = [] } = dataSource
+        return {
+          style: styleObj2String(style),
+          children: children.map(
+            ({ text = "", style = {}, bindtap = Function.prototype }) => ({
+              text,
+              style: styleObj2String(style),
+              bindtap,
+            })
+          )
+        }
+      } else {
+        return {
+          style: "",
+          children: []
+        }
+      }
+
     },
 
     onTap(e) {
@@ -142,16 +152,17 @@ Component({
                 dataSource[rowIndex],
                 rowIndex
               );
-              const customTbodyData =
+              const { style, children } =
                 this.parseCustomTbodyData(customDataSource);
 
               rowData[columnIndex] = {
                 type: "dynamic",
-                data: customTbodyData,
+                style,
+                data: children,
               };
 
               this.onTapHanlders[rowIndex] = this.onTapHanlders[rowIndex] || [];
-              this.onTapHanlders[rowIndex][columnIndex] = customTbodyData.map(
+              this.onTapHanlders[rowIndex][columnIndex] = children.map(
                 ({ bindtap }) => bindtap
               );
             });

@@ -19,25 +19,33 @@ Page({
           dataIndex: "action",
           width: 120,
           render(row, index) {
-            return [
-              {
-                text: "编辑",
-                style: {
-                  color: "red",
-                  fontSize: "24rpx",
-                  marginRight: "10rpx",
-                },
-                bindtap: () => console.log(`编辑表格${index}`),
+            return {
+              style: {
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center'
               },
-              {
-                text: "删除",
-                style: {
-                  color: "blue",
-                  fontSize: "24rpx",
+              children: [
+                {
+                  text: "编辑",
+                  style: {
+                    color: "red",
+                    fontSize: "24rpx",
+                    marginBottom: '4rpx'
+                  },
+                  bindtap: () => console.log(`编辑表格${index}`),
                 },
-                bindtap: () => _page.deleteRow(row),
-              },
-            ];
+                {
+                  text: "删除",
+                  style: {
+                    color: "blue",
+                    fontSize: "24rpx",
+                  },
+                  bindtap: () => _page.deleteRow(row),
+                },
+              ]
+            }
           },
         },
       ],
