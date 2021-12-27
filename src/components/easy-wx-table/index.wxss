@@ -1,45 +1,45 @@
-.component-carrot-table {
+.component-easy-wx-table {
   display: flex;
   flex-direction: column;
   width: max-content;
 }
-.component-carrot-table .thead-wrap {
+.component-easy-wx-table .thead-wrap {
   display: inline-block;
   text-align: center;
 }
-.component-carrot-table .thead-wrap .thead {
+.component-easy-wx-table .thead-wrap .thead {
   display: inline-block;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
 }
-.component-carrot-table .thead-wrap .thead.thead-border:last-child {
+.component-easy-wx-table .thead-wrap .thead.thead-border:last-child {
   border-right: none !important;
 }
-.component-carrot-table .thead-wrap .thead .thead-cell {
+.component-easy-wx-table .thead-wrap .thead .thead-cell {
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.component-carrot-table .tbody-wrap {
+.component-easy-wx-table .tbody-wrap {
   display: inline-block;
 }
-.component-carrot-table .tbody-wrap .row {
+.component-easy-wx-table .tbody-wrap .row {
   display: flex;
   text-align: center;
   border-bottom: 1rpx solid #eee;
 }
-.component-carrot-table .tbody-wrap .row.row-border:last-child {
+.component-easy-wx-table .tbody-wrap .row.row-border:last-child {
   border-bottom: none !important;
 }
-.component-carrot-table .tbody-wrap .row .row-cell {
+.component-easy-wx-table .tbody-wrap .row .row-cell {
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
 }
-.component-carrot-table .tbody-wrap .row .row-cell.row-cell-border:last-child {
+.component-easy-wx-table .tbody-wrap .row .row-cell.row-cell-border:last-child {
   border-right: none !important;
 }

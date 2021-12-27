@@ -1,4 +1,4 @@
-<view class="component-carrot-table">
+<view class="component-easy-wx-table">
 	<view class="thead-wrap" style="{{theadStyle||default.theadStyle}};border-right:{{borderStyle}};border-top:{{borderStyle}};border-left:{{borderStyle}}">
 		<view
 		 class="thead{{borderStyle?' thead-border':''}}"
@@ -26,7 +26,7 @@
 			 wx:key="idx"
 			 wx:for-index="cellIndex"
 			 wx:for-item="cellData"
-			 style="{{(cellData.style||default.rowCellStyle)+';border-right:'+borderStyle+';width:'+columns[cellIndex].width+'rpx;color:'+(columns[cellIndex].color||'#000')}}"
+			 style="{{'border-right:'+borderStyle+';width:'+columns[cellIndex].width+'rpx;color:'+(columns[cellIndex].color||'#000')+(';'+cellData.style||default.rowCellStyle)}}"
 			>
 				<block wx:if="{{cellData.type==='static'}}">{{cellData.data}}</block>
 				<block wx:if="{{cellData.type==='dynamic'}}">
